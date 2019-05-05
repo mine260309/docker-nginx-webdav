@@ -1,5 +1,5 @@
-if [ -n "${USERNAME}" ] && [ -n "${PASSWORD}" ]; then
-    htpasswd -bc /etc/nginx/webdavpasswd $USERNAME $PASSWORD
+if [ -n "${WEBDAV_USERNAME}" ] && [ -n "${WEBDAV_PASSWORD}" ]; then
+    htpasswd -bc /etc/nginx/webdavpasswd $WEBDAV_USERNAME $WEBDAV_PASSWORD
 fi
 
 mkdir -p /media/.tmp
